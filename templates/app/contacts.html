@@ -1,0 +1,17 @@
+{% extends "app/main.html" %}
+    {% block content %}
+    <div class="title"><p>Обратная связь</p></div>
+    <form class="contact" action="/org/mail" id="form" method="POST">
+        {% csrf_token %} 
+            <p>Ваш номер телефона:</p>
+            <input name="phone" type="text" placeholder="+12345678900" required="required" pattern="[0-9]{1,20}" size="40">
+            <p>Ваш адрес электронной почты:</p>
+            <input name="mail" type="email" placeholder = "example@mail.ru" required="required" size="100">
+            <p>Сообщение</p>
+            <textarea name="message" rows="4" cols="50" required="required"></textarea>
+            <div></div>
+         <div><button class="btn" type="submit"><p>Отправить</p></button></div>
+         </div>
+         </form>
+        
+    {% endblock content %}

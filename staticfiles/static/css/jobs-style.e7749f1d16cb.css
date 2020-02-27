@@ -1,0 +1,74 @@
+.job img {
+    float: left;
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+    --notchSize: 35px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+}
+
+body>.title {
+    width: 900px;
+    height: 50px;
+    margin: 10px auto;
+    color: #0a8abf;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 50px;
+}
+
+.content {
+    width: 900px;
+    margin: 10px auto;
+}
+
+.job {
+    width: 900px;
+    height: 200px;
+}
+.info {
+    float: left;
+    width: 600px;
+    margin: 5px;
+    height: 150px;
+}
+
+.title {
+    width: 600px;
+    height: 30px;
+    color: #0a8abf;
+    font-size: 16pt;
+    margin-left: 20px;
+}
+
+.price {
+    width: 600px;
+    height: 15px;
+    color: white;
+    font-size: 12pt;
+    margin-left: 20px;
+}
+
+.job a {
+    width: 100px;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    height: 15px;
+    line-height: 15px;
+    padding: 4px;
+    margin: 56px 20px 0px 20px;
+    font-size: 8pt;
+    float: left;
+    text-align: center;
+}
+
+.info .info {
+    width: 600px;
+    height: 30px;
+    color: white;
+    font-size: 10pt;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 15px;
+}

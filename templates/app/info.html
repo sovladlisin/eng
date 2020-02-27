@@ -1,0 +1,9 @@
+{% extends "app/main.html" %}
+{% block content %}
+<div class="title"><p>О компании</p></div>
+<div class="container">
+    <div class="link"><a href="{% url 'app:contacts'%}">Контакты</a></div>
+    <div class="link"><a href="{% url 'app:portfolio'%}">Портфолио</a></div>
+    <div class="link"><a href="{% url 'app:certificates'%}">Сертификаты и лицензии</a></div>
+</div>
+{% endblock content %}

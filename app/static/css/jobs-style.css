@@ -1,0 +1,229 @@
+.job img {
+    float: left;
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+    --notchSize: 35px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+}
+
+body>.title {
+    width: 900px;
+    height: 50px;
+    margin: 20px auto;
+    color: #0a8abf;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 50px;
+    --notchSize: 15px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    background: rgb(255,255,255,0.03);
+    font-size: 15pt;
+    text-align: center;
+    transition: 0.5s;
+    -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.3);
+}
+
+.content {
+    width: 900px;
+    margin: 10px auto;
+}
+
+.job {
+    width: 900px;
+    height: 200px;
+}
+.info {
+    float: left;
+    width: 600px;
+    margin: 5px;
+    height: 150px;
+}
+
+.title {
+    width: 600px;
+    height: 30px;
+    color: #0a8abf;
+    font-size: 16pt;
+    margin-left: 10px;
+}
+
+.price {
+    width: 600px;
+    height: 15px;
+    color: white;
+    font-size: 12pt;
+    margin-left: 20px;
+}
+
+.job a {padding: 0px 10px;}
+
+.info .info {
+    width: 600px;
+    height: 30px;
+    color: white;
+    font-size: 10pt;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 15px;
+}
+.full-description {
+    width: 900px;
+    color: white;
+    margin: 10px auto;
+}
+.photoalbum img {
+    height: 170px;
+    max-width: 250px;
+    object-fit: scale-down;
+    --notchSize: 20px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.photoalbum {
+    width: 900px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
+}
+.title>p {
+    margin-left: 10px;
+}
+.document p {
+    color: white;
+    font-size: 9pt;
+    width: 280px;
+    text-align: center;
+}
+.link {
+    width: 280px;
+    --notchSize: 35px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    height: 160px;
+    background: rgb(255,255,255,0.03);
+    /* border-radius: 14px; */
+    font-size: 10pt;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+}
+
+.link a {
+    line-height: 160px;
+    font-size: 17pt;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+.link:hover{
+    margin-top:-10px;
+    width:285px;
+    height:165px;
+    background: rgb(255,255,255,0.1);
+}
+form#form {
+    width: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 215px 315px;
+    grid-gap: 15px;
+    justify-items: right;
+}
+
+input[type="hidden"] {}
+
+input{
+    width: 300px;
+    height: 30px;
+    --notchSize: 8px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    padding: 5px 10px;
+    color: #232d41;
+    float: left;
+}
+
+form p {
+    color: white;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 10px;
+}
+
+form textarea {
+    --notchSize: 8px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    padding: 10px;
+    width: 300px;
+    height: 260px;
+    resize: none;
+}
+form div {
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+button.btn {
+    background: #0a8abf;
+    --notchSize: 15px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    width: 100px;
+    text-align: center;
+    transition: 0.5s;
+}
+button.btn p{
+    width:100px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+}
+button.btn p:hover{
+    background: #34aadd;
+
+}
+.phone {
+    color: white;
+    font-size: 12pt;
+    line-height: 30px;
+}
+
+.mail {
+    color: white;
+    font-size: 12pt;
+    line-height: 30px;
+}
+
+.delete a {
+    background: #0a8abf;
+    --notchSize: 15px;
+    clip-path: polygon( 0% var(--notchSize), var(--notchSize) 0%, calc(100%) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% ) );
+    width: 80px;
+    text-align: center;
+    transition: 0.5s;
+    display: block;
+    height: 30px;
+    color: white;
+    font-size: 9pt;
+    line-height: 30px;
+    padding: 0;
+    margin: 0px;
+}
+.delete {
+    width: 80px;
+    height: 30px;
+    display: block;
+}
+
+div.requests {
+    display: grid;
+    grid-template-columns: 80px 160px 510px auto;
+    grid-gap: 25px;
+}
+.message {
+    color: white;
+    font-size: 12pt;
+    line-height: 30px;
+}

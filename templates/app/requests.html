@@ -1,0 +1,15 @@
+{% extends "app/main.html" %}
+    {% block content %}
+    <div class="title"><p>Запросы клиентов</p></div>
+    <div class="content">
+    <div class="requests">
+    {% for request in requests %}
+            <div class="phone"><p>{{request.phone}}</p></div>
+            <div class="mail"><p>{{request.mail}}</p></div>
+            <div class="message"><p>{{request.message}}</p></div>
+            <div class="delete"><a href="{% url 'app:deleteRequest' pk=request.pk %}">Удалить</a></div>
+        {% endfor %}
+    </div>
+      
+    </div>
+{% endblock content %}

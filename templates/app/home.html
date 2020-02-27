@@ -1,0 +1,42 @@
+{% extends "app/main.html" %}
+{% block content %}
+{% if marker %}
+    <a class="requests" href="{% url 'app:requests'%}">Заказы</a>
+{% endif %}
+
+<div class="container">
+    {% if cards %}
+        {% for card in cards %}
+        <div class="card">
+            <div class="name"><p>{{card.name}}</p></div>
+            <div class="icon">
+                <p>
+                    {% autoescape off %}
+                    {{ card.icon }}
+                    {% endautoescape %}
+                </p>
+            </div>
+            <div class="text"><p>{{card.text}}</p></div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+
+<div class="history">
+    <div class="title"><p>Наше портфолио</p></div>
+    <div class="container">
+    {% if portfolio_cards %}
+        {% for card in portfolio_cards %}
+            <div class="picture"><img src="{% url 'db_file_storage.get_file' %}?name={{ card.picture }}"/></div>
+            <div class="info">
+                <div class="title"><a href="{% url 'app:portfolioJobView' pk=card.pk %}">{{card.name}}</a></div>
+                <div class="text">{{card.info}}</div>
+            </div>
+                
+            
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+{% endblock content %}

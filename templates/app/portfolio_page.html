@@ -1,0 +1,31 @@
+{% extends "app/main.html" %}
+    {% block content %}
+    <div class="title"><p>Подробное описание выполненной работы</p></div>
+    <div class="content">
+        <div class="job">
+            <img src="{% url 'db_file_storage.get_file' %}?name={{ job.picture }}" />
+            <div class="info">
+                <div class="title"><p>{{job.name}}</p></div>
+                <div class="info"><p>{{job.info}}</p></div>
+                {% comment %} {% if marker %} <a href="{% url 'app:jobEdit' pk=job.pk %}">Изменить</a> {% endif %} {% endcomment %}
+            </div>
+            
+        </div>
+    </div>
+    <div class="full-description"><p>{{job.full_description}}</p></div>
+    
+        {% if album %}
+            <div class="title"><p>Фотоальбом</p></div>
+            <div class="photoalbum">
+            {% for photo in album %}
+                <img src="{% url 'db_file_storage.get_file' %}?name={{ photo.picture }}" />
+            {% endfor %}
+             </div>
+        {% endif %}
+   
+    
+    
+
+
+  
+{% endblock content %}

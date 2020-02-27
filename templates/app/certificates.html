@@ -1,0 +1,16 @@
+
+{% extends "app/main.html" %}
+{% block content %}
+        {% if album %}
+            <div class="title"><p>Сертификаты и лицензии</p></div>
+            <div class="photoalbum">
+            {% for photo in album %}
+            <div class="document">
+                <img src="{% url 'db_file_storage.get_file' %}?name={{ photo.picture }}" />
+                <p>{{photo.name}}</p>
+            </div>
+            {% endfor %}
+             </div>
+        {% endif %}
+
+{% endblock content %}

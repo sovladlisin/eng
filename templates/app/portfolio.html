@@ -1,0 +1,18 @@
+{% extends "app/main.html" %}
+    {% block content %}
+    <div class="title"><p>Порфолио компании</p></div>
+    <div class="content">
+    {% if jobs %}
+    {% for job in jobs %}
+        <div class="job">
+            <img src="{% url 'db_file_storage.get_file' %}?name={{ job.picture }}" />
+            <div class="info">
+                <div class="title"><a href="{% url 'app:portfolioJobView' pk=job.pk %}">{{job.name}}</a></div>
+                <div class="info"><p>{{job.info}}</p></div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+      
+    </div>
+    {% endblock content %}

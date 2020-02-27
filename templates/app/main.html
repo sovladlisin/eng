@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Инженер-Омск</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fixer-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jobs-style.css' %}">
+    <script src= "{% static 'js/preload.js' %}"></script>
+</head>
+<body>
+<div class="se-pre-con"></div>
+<div class="show">
+  <div class="overlay"></div>
+  <div class="img-show">
+    <span><i class="fas fa-times"></i></span>
+    <img src="">
+  </div>
+</div>
+
+
+<div class="header">
+    <a href="{% url 'app:home'%}"><div class="logo"></div></a>
+    <div class="toolbar">
+        <div id="info"><a href="{% url 'app:info'%}"><i class="fas fa-info"></i></a></div>
+        <div id="jobs"><a href="{% url 'app:jobs'%}"><i class="fas fa-shopping-cart"></i></a></div>
+        <div id="home"><a href="{% url 'app:home'%}"><i class="fas fa-home"></i></a></div>
+    </div>
+</div>
+{% block content %}
+{% endblock content %}
+
+<div class="footer">
+    <div>
+        <p>© 2011-2016 ИНЖЕНЕР-ОМСК,</p>
+        <p>многопрофильная компания </p>
+    </div>
+    <div>
+        <p>Троицкое, Октябрьская, 1</p>
+    </div>
+    <div>
+        <p>тел. +7 (3812) 38-22-36</p>
+        <p>факс +7 (3812) 92-94-85</p>
+    </div>
+</div>
+</body>
+</html>

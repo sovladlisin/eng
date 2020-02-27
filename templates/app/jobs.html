@@ -1,0 +1,19 @@
+{% extends "app/main.html" %}
+    {% block content %}
+    <div class="title"><p>Наши услуги</p></div>
+    <div class="content">
+      {% for job in jobs %}
+        <div class="job">
+            <img src="{% url 'db_file_storage.get_file' %}?name={{ job.picture }}" />
+            <div class="info">
+                <div class="title"><a href="{% url 'app:jobView' pk=job.pk %}">{{job.name}}</a></div>
+                <div class="price"><p>Цена: {{job.price}} <i style="color: #00bfa5;font-size: 8pt;" class="fas fa-ruble-sign"></i></p></div>
+                <div class="info"><p>{{job.info}}</p></div>
+                {% comment %} {% if marker %} <a href="{% url 'app:jobEdit' pk=job.pk %}">Изменить</a> {% endif %} {% endcomment %}
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+  
+{% endblock content %}
